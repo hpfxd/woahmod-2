@@ -1,4 +1,5 @@
 # Woahmod v2
+[![Discord Server](https://discordapp.com/api/guilds/319516937124315137/widget.png)](https://discord.gg/KgwHHX2)
 ## Info
 WoahMod is a Minecraft modification.
 ## Features
