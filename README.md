@@ -10,7 +10,7 @@ pull requests welcome.
 - /woahmod - Main command
 
 ## Downloading
-- Grab a build from the releases page
+- Grab a build from the [releases](https://github.com/hpfxd/woahmod-2/releases) page
 - Install [Minecraft Forge](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.8.9.html)
 - Put the release you downloaded in your `.minecraft/mods/` directory.
 - Launch the game with forge.
