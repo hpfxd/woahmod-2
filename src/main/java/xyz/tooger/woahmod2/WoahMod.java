@@ -10,7 +10,7 @@ import xyz.tooger.woahmod2.commands.WoahmodCommand;
 @Mod(modid = WoahMod.MODID, version = WoahMod.VERSION)
 public class WoahMod {
     public static final String MODID = "woahmod-2";
-    public static final String VERSION = "0.1";
+    public static final String VERSION = "0.2";
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
