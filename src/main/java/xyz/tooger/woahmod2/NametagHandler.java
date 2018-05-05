@@ -9,7 +9,7 @@ public class NametagHandler {
     public void modifyName(PlayerEvent.NameFormat event) {
         event.displayname = WoahMod.loadTag(
                 event.entityPlayer.getUniqueID().toString()
-        ) + event.username;
+        ).replace("&", "§") + event.username;
     }
 
     @SubscribeEvent
