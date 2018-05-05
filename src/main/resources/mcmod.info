@@ -1,0 +1,13 @@
+[{
+  "modid": "woahmod-2",
+  "name": "Woahmod v2",
+  "description": "yes",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://tooger.xyz",
+  "updateUrl": "",
+  "authorList": ["hpfxd"],
+  "logoFile": "woahmod.png",
+  "screenshots": [],
+  "dependencies": []
+}]
