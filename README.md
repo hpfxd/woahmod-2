@@ -17,7 +17,7 @@ Usage: `/woahmod [commands]`
 Example: `/woahmod`
 - Tags  
 Tags are things that appear before your name above your head.  
-
+You may request one on the [Discord server](https://discord.gg/a2DQmak)!
 
 ## Downloading
 - Grab a build from the [releases](https://github.com/hpfxd/woahmod-2/releases) page
