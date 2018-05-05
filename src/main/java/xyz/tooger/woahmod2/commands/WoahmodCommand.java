@@ -14,6 +14,7 @@ public class WoahmodCommand extends CommandBase {
                 utils.sendMessage("&bCommands");
                 utils.sendMessage("&f");
                 utils.sendMessage("&f/woahmod &b- &fMain woahmod command.");
+                utils.sendMessage("&f/massmsg &b- &fRun a command once for everybody on the server.");
                 utils.sendMessage("&b&m" + utils.br());
             } else {
                 sendHelp();
