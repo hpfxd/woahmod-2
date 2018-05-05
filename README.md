@@ -6,8 +6,18 @@ no idea why we thought this was a good idea but here we are
 
 pull requests welcome.
 ## Features
-- /massmsg - Run a command once for everybody on the server.
-- /woahmod - Main command
+- /massmsg  
+Run a command once for every player on the server.  
+Replaces `%player%` as the current player in the loop.  
+Usage: `/massmsg <delay in ms> <command>`  
+Example: `/massmsg 300 /msg %player% hello!`  
+- /woahmod  
+Main WoahMod command. Shows commands and version info. 
+Usage: `/woahmod [commands]`  
+Example: `/woahmod`
+- Tags  
+Tags are things that appear before your name above your head.  
+
 
 ## Downloading
 - Grab a build from the [releases](https://github.com/hpfxd/woahmod-2/releases) page
