@@ -1,8 +1,9 @@
-package xyz.tooger.woahmod2;
+package xyz.tooger.woahmod2.misc;
 
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent;
+import xyz.tooger.woahmod2.WoahMod;
 
 public class NametagHandler {
     @SubscribeEvent
@@ -14,6 +15,6 @@ public class NametagHandler {
 
     @SubscribeEvent
     public void joinServer(FMLNetworkEvent.ClientConnectedToServerEvent event) {
-        WoahMod.reloadTags();
+        new Thread(WoahMod::reloadTags).start();
     }
 }

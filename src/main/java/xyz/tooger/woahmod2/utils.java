@@ -3,6 +3,7 @@ package xyz.tooger.woahmod2;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.util.ChatComponentText;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -80,5 +81,20 @@ public class utils {
             e.printStackTrace();
         }
         return new JSONObject();
+    }
+
+    public static JSONArray readJsonArrayFromUrl(String url) {
+        try {
+            URLConnection conn = new URL(url).openConnection();
+            conn.addRequestProperty("User-Agent", "WoahMod v" + WoahMod.VERSION);
+            conn.setDoInput(true);
+            InputStream is = conn.getInputStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+            String jsonText = readAll(rd);
+            return new JSONArray(jsonText);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new JSONArray();
     }
 }
