@@ -1,4 +1,4 @@
-theme: "jekyll-theme-minimal"
+theme: jekyll-theme-cayman
 title: "WoahMod v2"
 description: "WoahMod: the only Minecraft modification that makes you say “woah, this is bad“."
 logo: "src/main/resources/woahmod.png"
