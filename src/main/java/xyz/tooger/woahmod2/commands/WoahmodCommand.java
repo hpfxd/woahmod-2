@@ -4,6 +4,7 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import org.json.JSONObject;
 import xyz.tooger.woahmod2.WoahMod;
+import xyz.tooger.woahmod2.misc.user.WoahModUser;
 import xyz.tooger.woahmod2.utils;
 
 public class WoahmodCommand extends CommandBase {
@@ -59,8 +60,12 @@ public class WoahmodCommand extends CommandBase {
     }
 
     private void sendHelp() {
+        WoahModUser user = new WoahModUser(utils.mc.thePlayer.getUniqueID().toString());
         utils.sendMessage("&b&m" + utils.br());
         utils.sendMessage("&fYou are using &bWoahMod 2 &fv&b" + WoahMod.VERSION + " &fby &bhpfxd");
+        utils.sendMessage("&f");
+        utils.sendMessage("&fHello &b" + utils.mc.thePlayer.getName() + "&f!");
+        utils.sendMessage("&fCurrent tag: " + (user.hasTag() ? user.getTag() : "&bNone"));
         utils.sendMessage("&f");
         utils.sendMessage("&fUse &b/woahmod commands &ffor a list of commands!");
         utils.sendMessage("&b&m" + utils.br());

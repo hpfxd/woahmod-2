@@ -5,6 +5,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import xyz.tooger.woahmod2.WoahMod;
+import xyz.tooger.woahmod2.misc.user.WoahModUser;
 import xyz.tooger.woahmod2.utils;
 
 public class HUD {
@@ -15,7 +16,7 @@ public class HUD {
                 5
         );
         this.drawLine(
-                "&c" + WoahMod.loadTag(utils.mc.thePlayer.getUniqueID().toString()) + utils.mc.thePlayer.getName(),
+                "&c" + new WoahModUser(utils.mc.thePlayer.getUniqueID().toString()).getTag() + utils.mc.thePlayer.getName(),
                 15
         );
     }
