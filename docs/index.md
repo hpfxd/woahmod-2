@@ -1,11 +1,9 @@
-# Woahmod v2
-[![Discord Server](https://discordapp.com/api/guilds/319516937124315137/widget.png)](https://discord.gg/KgwHHX2)
-## Info
+# Info
 WoahMod is a Minecraft modification.  
 no idea why we thought this was a good idea but here we are  
 
 pull requests welcome.
-## Features
+# Features
 - /woahmod  
 Main WoahMod command. Shows commands and version info. 
 Usage: `/woahmod [commands]`  
@@ -23,14 +21,14 @@ Example: `/spammer 1000 10 /tell hpf hello!`
 Tags are things that appear before your name above your head.  
 You may request one on the [Discord server](https://discord.gg/a2DQmak)!
 
-## Downloading
+# Downloading
 - Grab a build from the [releases](https://github.com/hpfxd/woahmod-2/releases) page
 - Install [Minecraft Forge](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.8.9.html)
 - Put the release you downloaded in your `.minecraft/mods/` directory.
 - Launch the game with forge.
 - Done!
 
-## .minecraft location
+# .minecraft location
 - Windows: `%appdata%\.minecraft\`
 - Mac: `~/Library/Application Support/minecraft/`
 - Linux: `~/.minecraft/`
