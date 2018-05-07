@@ -1,14 +1,16 @@
 {
-	"e075b4beb40e4b148c112354b95709a1": {
-		"tag": "&b[&au&bl&ct&di&em&aa&bt&ce &dw&eo&aa&bh&cz&de&er&b] &4"
-	},
-	"f5dc0bf3364f416e984939d4eea57eda": {
-		"tag": "&b[&femo&b] &c"
-	},
-	"8ca07da256e84a6e8774c78c426adf23": {
-		"tag": "&b[&7elephant&b] &a"
-	},
-	"39b18a2db15b4bd7991bc8af42633af4": {
-		"tag": "&b[&6Neptune&b] &a"
-	}
+  "e075b4beb40e4b148c112354b95709a1": {
+    "tag": "&b[&au&bl&ct&di&em&aa&bt&ce &dw&eo&aa&bh&cz&de&er&b] &4",
+    "upsideDown": true
+  },
+  "f5dc0bf3364f416e984939d4eea57eda": {
+    "tag": "&b[&femo&b] &c"
+  },
+  "8ca07da256e84a6e8774c78c426adf23": {
+    "tag": "&b[&7elephant&b] &a"
+  },
+  "39b18a2db15b4bd7991bc8af42633af4": {
+    "tag": "&b[&aNeptune&b] &a",
+    "upsideDown": true
+  }
 }
