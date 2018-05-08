@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $.getJSON("https://api.github.com/repos/hpfxd/woahmod-2/releases/latest", function(data) {
         var ver = data.tag_name;
-        var count = new countUp("latest", 0.0, ver, 1);
+        var count = new countUp("latest", 0.0, ver, 1, 4.5);
         if (!count.error) {
             count.start();
         } else {

@@ -27,7 +27,7 @@ Tags are things that appear before your name above your head.
 You may request one on the [Discord server](https://discord.gg/a2DQmak)!
 
 # Downloading
-- Grab a build from the [releases](https://github.com/hpfxd/woahmod-2/releases) page
+- Grab a build from the [releases](/releases) page
 - Install [Minecraft Forge for 1.8.9](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.8.9.html)
 - Put the release you downloaded in your `.minecraft/mods/` directory.
 - Launch the game with forge.
