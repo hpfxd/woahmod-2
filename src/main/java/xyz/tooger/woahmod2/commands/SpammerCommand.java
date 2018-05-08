@@ -4,6 +4,10 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import xyz.tooger.woahmod2.utils;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.util.List;
+
 public class SpammerCommand extends CommandBase {
     @Override
     public void processCommand(ICommandSender sender, String[] args) {
@@ -16,6 +20,50 @@ public class SpammerCommand extends CommandBase {
             utils.sendMessage("&bDelay");
             utils.sendMessage("&fThe delay is in milliseconds. This means that to make it a one second delay, you should use '1000'.");
             utils.sendMessage("&b&m" + utils.br());
+        } else if (args[0].equals("file")) {
+            if (args.length == 3 || args.length == 5) {
+                try {
+                    Integer.parseInt(args[1]);
+                } catch (NumberFormatException e) {
+                    utils.sendMessage("&bWoahMod Spammer > &fArgument #2 must be an integer!");
+                    return;
+                }
+                File file = new File(utils.mc.mcDataDir, "mods/woahmod/spammerfiles/" + args[2]);
+                if (!file.exists()) {
+                    utils.sendMessage("&bWoahMod Spammer > &f" + args[2] + " does not exist.");
+                    utils.sendMessage("&bWoahMod Spammer > &fRead more on &bhttps://woahmod.tooger.xyz/&f!");
+                    return;
+                }
+
+                new Thread(() -> {
+                    try {
+                        int delay = Integer.parseInt(args[1]);
+                        List<String> lines = Files.readAllLines(file.toPath());
+                        for (int i = 0; i < lines.size(); i++) {
+                            if (args.length == 3) {
+                                utils.mc.thePlayer.sendChatMessage(lines.get(i));
+                            } else {
+                                if (args[3].equals("-p")) {
+                                    utils.mc.thePlayer.sendChatMessage(lines.get(i).replace("%p%", args[4]));
+                                } else {
+                                    utils.mc.thePlayer.sendChatMessage(lines.get(i));
+                                }
+                            }
+                            utils.sendMessage("&bWoahMod Spammer > &fSent &b" + (i + 1) + "&f/&b" + lines.size());
+                            if (delay != 0) {
+                                Thread.sleep(delay);
+                            }
+                        }
+                    } catch (NumberFormatException e) {
+                        utils.sendMessage("&bWoahMod Spammer > &fInvalid arguments.");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        utils.sendMessage("&bWoahMod Spammer > &fAn &cerror &foccurred. Check the logs for more details.");
+                    }
+                }).start();
+            } else {
+                utils.sendMessage("&bWoahMod Spammer > &fInvalid argument count.");
+            }
         } else {
             try {
                 Integer.parseInt(args[0]);

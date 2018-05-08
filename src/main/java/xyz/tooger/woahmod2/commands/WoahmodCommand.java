@@ -13,11 +13,14 @@ public class WoahmodCommand extends CommandBase {
         if (args.length == 1) {
             if (args[0].equals("commands")) {
                 utils.sendMessage("&b&m" + utils.br());
-                utils.sendMessage("&bCommands");
+                utils.sendMessage("&cCommands");
                 utils.sendMessage("&f");
                 utils.sendMessage("&f/woahmod &b- &fMain woahmod command.");
                 utils.sendMessage("&f/massmsg <delay> <command> &b- &fRun a command once for everybody on the server.");
                 utils.sendMessage("&f/spammer <delay> <amount> <command> &b- &fSpam a command x amount of times with a delay.");
+                utils.sendMessage("&f/spammer file <delay> <file> [-p <player>] &b- &fSpam commands from a text file.");
+                utils.sendMessage("&f");
+                utils.sendMessage("&cUse &fhttps://woahmod.tooger.xyz &cfor more info.");
                 utils.sendMessage("&b&m" + utils.br());
             } else if (args[0].equals("updates")) {
                 new Thread(() -> {

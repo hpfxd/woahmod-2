@@ -15,10 +15,14 @@ import xyz.tooger.woahmod2.misc.NametagHandler;
 import xyz.tooger.woahmod2.misc.PlayerRenderHandler;
 import xyz.tooger.woahmod2.misc.UpdateAlerter;
 
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 @Mod(modid = WoahMod.MODID, version = WoahMod.VERSION)
 public class WoahMod {
     static final String MODID = "woahmod-2";
-    public static final String VERSION = "0.6";
+    public static final String VERSION = "0.7";
     public static JSONObject users = new JSONObject();
 
     @EventHandler
@@ -31,6 +35,19 @@ public class WoahMod {
         MinecraftForge.EVENT_BUS.register(new NametagHandler());
         MinecraftForge.EVENT_BUS.register(new UpdateAlerter());
         MinecraftForge.EVENT_BUS.register(new PlayerRenderHandler());
+
+        File file = new File(utils.mc.mcDataDir, "mods/woahmod/");
+        if (!file.exists()) {
+            if (!(
+                    file.mkdir() &&
+                            new File(utils.mc.mcDataDir, "mods/woahmod/spammerfiles/").mkdir()
+            )) {
+                Logger.getLogger("WoahMod").log(Level.SEVERE, "Could not create one of the following directories:\n" +
+                        "mods/woahmod\n" +
+                        "mods/woahmod/spammerfiles/"
+                );
+            }
+        }
     }
 
     public static JSONObject updates() {
