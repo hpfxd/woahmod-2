@@ -11,7 +11,7 @@ $(document).ready(function() {
         $(".page-header").append("<a class='btn'" +
             " href='https://github.com/hpfxd/woahmod-2/releases/download/"+ver+"/woahmod-2-"+ver+".jar'" +
             " target='_blank'>" +
-            "Download latest release" +
+            "Download" +
             "</a>");
     });
 });
