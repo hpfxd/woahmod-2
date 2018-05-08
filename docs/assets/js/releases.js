@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.getJSON("https://api.github.com/repos/hpfxd/woahmod-2/releases", function(data) {
-        data.info.reverse();
+        data.reverse();
         $.each(data, function (i, v) {
             var ver = v.tag_name;
             $("#releases-section").append(
