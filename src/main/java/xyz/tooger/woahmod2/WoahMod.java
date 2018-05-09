@@ -43,7 +43,7 @@ public class WoahMod {
                             new File(utils.mc.mcDataDir, "mods/woahmod/spammerfiles/").mkdir()
             )) {
                 Logger.getLogger("WoahMod").log(Level.SEVERE, "Could not create one of the following directories:\n" +
-                        "mods/woahmod\n" +
+                        "mods/woahmod/\n" +
                         "mods/woahmod/spammerfiles/"
                 );
             }
@@ -51,11 +51,6 @@ public class WoahMod {
     }
 
     public static JSONObject updates() {
-        JSONArray json = utils.readJsonArrayFromUrl("https://api.github.com/repos/hpfxd/woahmod-2/releases");
-        if (json.length() != 0) {
-            System.out.println("Latest WoahMod version is " + json.getJSONObject(0).getString("tag_name"));
-            return json.getJSONObject(0);
-        }
-        return new JSONObject();
+        return utils.readJsonFromUrl("https://api.github.com/repos/hpfxd/woahmod-2/releases/latest");
     }
 }
