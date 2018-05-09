@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 @Mod(modid = WoahMod.MODID, version = WoahMod.VERSION)
 public class WoahMod {
     static final String MODID = "woahmod-2";
-    public static final String VERSION = "0.7";
+    public static final String VERSION = "0.8";
     public static JSONObject users = new JSONObject();
 
     @EventHandler

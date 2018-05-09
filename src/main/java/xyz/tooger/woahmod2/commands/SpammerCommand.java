@@ -44,7 +44,10 @@ public class SpammerCommand extends CommandBase {
                                 utils.mc.thePlayer.sendChatMessage(lines.get(i));
                             } else {
                                 if (args[3].equals("-p")) {
-                                    utils.mc.thePlayer.sendChatMessage(lines.get(i).replace("%p%", args[4]));
+                                    utils.mc.thePlayer.sendChatMessage(
+                                            lines.get(i).replace("%p%", args[4])
+                                                    .replace("%rplayer%", utils.randomPlayer())
+                                    );
                                 } else {
                                     utils.mc.thePlayer.sendChatMessage(lines.get(i));
                                 }
@@ -77,7 +80,10 @@ public class SpammerCommand extends CommandBase {
                     int amount = Integer.parseInt(args[1]);
                     String command = utils.arrToStr(args, 2);
                     for (int i = 0; i < amount; i++) {
-                        utils.mc.thePlayer.sendChatMessage(command);
+                        utils.mc.thePlayer.sendChatMessage(
+                                command
+                                        .replace("%rplayer%", utils.randomPlayer())
+                        );
                         utils.sendMessage("&bWoahMod Spammer > &fSent &b" + (i + 1) + "&f/&b" + amount);
                         if (delay != 0) {
                             Thread.sleep(delay);

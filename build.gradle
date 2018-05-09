@@ -21,7 +21,7 @@ compileJava {
     targetCompatibility = '1.8'
 }
 
-version = "0.7"
+version = "0.8"
 group= "xyz.tooger"
 archivesBaseName = "woahmod-2"
 

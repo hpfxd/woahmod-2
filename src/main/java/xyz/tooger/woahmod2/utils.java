@@ -13,6 +13,7 @@ import java.net.URLConnection;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 import static java.lang.Math.floor;
 
@@ -48,6 +49,11 @@ public class utils {
         }
 
         return playerNames;
+    }
+
+    public static String randomPlayer() {
+        ArrayList<String> players = getTabList();
+        return players.get(new Random().nextInt(players.size()));
     }
 
     public static String arrToStr(String[] arr, int startFrom) {

@@ -5,6 +5,7 @@ import net.minecraft.command.ICommandSender;
 import xyz.tooger.woahmod2.utils;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MassmsgCommand extends CommandBase {
     @Override
@@ -36,11 +37,11 @@ public class MassmsgCommand extends CommandBase {
                     for (int i = 0; i < players.size(); i++) {
                         utils.mc.thePlayer.sendChatMessage(
                                 command.replace("%player%", players.get(i))
+                                .replace("%rplayer%", utils.randomPlayer())
                         );
                         utils.sendMessage("&bWoahMod Massmsg > &fSent &b" + (i + 1) + "&f/&b" + players.size());
                         if (delay != 0) {
-                            Thread.sleep(delay);
-                        }
+                            Thread.sleep(delay); }
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
