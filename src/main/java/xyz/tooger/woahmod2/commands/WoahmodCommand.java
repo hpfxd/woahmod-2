@@ -68,7 +68,9 @@ public class WoahmodCommand extends CommandBase {
         utils.sendMessage("&fYou are using &bWoahMod 2 &fv&b" + WoahMod.VERSION + " &fby &bhpfxd");
         utils.sendMessage("&f");
         utils.sendMessage("&fHello &b" + utils.mc.thePlayer.getName() + "&f!");
-        utils.sendMessage("&fCurrent tag: " + (user.hasTag() ? user.getTag() : "&bNone"));
+        utils.sendMessage("&fCurrent tag: " + (user.hasTag() ? user.getTag() : "&bNone\n" +
+                "&cRequest a tag in the Discord server!\n" +
+                "&bdiscord.gg/KgwHHX2"));
         utils.sendMessage("&f");
         utils.sendMessage("&fUse &b/woahmod commands &ffor a list of commands!");
         utils.sendMessage("&b&m" + utils.br());
