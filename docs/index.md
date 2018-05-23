@@ -1,8 +1,6 @@
 # Info
 WoahMod is a Minecraft modification.  
-no idea why we thought this was a good idea but here we are  
-
-pull requests welcome.
+It has many features that such as spammer and mass message!
 # Features
 - /woahmod  
 Main WoahMod command. Shows commands and version info. 
